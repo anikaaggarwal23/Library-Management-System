@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="manageBooks.html">Manage Books</a></li>
+                <li><a href="manageStudents.html">Manage Students</a></li>
+                <li><a href="issueBook.html">Issue Book</a></li>
+                <li><a href="returnBook.html">Return Book</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="content">
+        <h1>Return Book</h1>
+        <form onsubmit="returnBookConfirmation('Selected Book'); return false;">
+            <label for="bookSelect">Select Book:</label>
+            <select id="bookSelect" name="bookSelect">
+                <option value="Introducing Java 8">Introducing Java 8</option>
+                <option value="Java: The Legend">Java: The Legend</option>
+            </select>
+            
+            <button type="submit">Return

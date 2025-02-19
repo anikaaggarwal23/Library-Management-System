@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="manageBooks.html">Manage Books</a></li>
+                <li><a href="manageStudents.html">Manage Students</a></li>
+                <li><a href="issueBook.html">Issue Book</a></li>
+                <li><a href="returnBook.html">Return Book</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="content">
+        <h1>Manage Students</h1>
+        
+        <div class="form-container">
+            <input type="text" id="studentSearch" placeholder="Search students...">
+            <button onclick="openModal('addStudentModal')">Add New Student</button>
+        </div>
+        
+        <div class="table-container">
+            <table id="studentTable">
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Branch</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Sunil</td>
+                    <td>BSC</td>
+                    <td>CS</td>
+                    <td>
+                        <button onclick="editStudent(1)">Edit</button>
+                        <button onclick="deleteStudent(1)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mangesh</td>
+                    <td>MSC</td>
+                    <td>CS</td>
+                    <td>
+                        <button onclick="editStudent(2)">Edit</button>
+                        <button onclick="deleteStudent(2)">Delete</button>
+                    </td>
+                </tr>
+                <!-- Additional rows for students can be added here -->
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function openModal(modalId) {
+            // Open a modal with form to add or edit students
+            alert("Open modal for adding a new student!");
+        }
+        
+        function editStudent(studentId) {
+            alert("Edit student with ID: " + studentId);
+        }
+
+        function deleteStudent(studentId) {
+            alert("Delete student with ID: " + studentId);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="manageBooks.html">Manage Books</a></li>
+                <li><a href="manageStudents.html">Manage Students</a></li>
+                <li><a href="issueBook.html">Issue Book</a></li>
+                <li><a href="returnBook.html">Return Book</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="content">
+        <h1>Manage Books</h1>
+        
+        <div class="form-container">
+            <input type="text" id="bookSearch" placeholder="Search books...">
+            <button onclick="openModal('addBookModal')">Add New Book</button>
+        </div>
+        
+        <div class="table-container">
+            <table id="bookTable">
+                <tr>
+                    <th>Book ID</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Introducing Java 8</td>
+                    <td>Raoul-Gabriel Urma</td>
+                    <td>4</td>
+                    <td>
+                        <button onclick="editBook(1)">Edit</button>
+                        <button onclick="deleteBook(1)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Java: The Legend</td>
+                    <td>Benjamin Evans</td>
+                    <td>2</td>
+                    <td>
+                        <button onclick="editBook(2)">Edit</button>
+                        <button onclick="deleteBook(2)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Spring MVC: A Tutorial</td>
+                    <td>Paul Deck</td>
+                    <td>3</td>
+                    <td>
+                        <button onclick="editBook(3)">Edit</button>
+                        <button onclick="deleteBook(3)">Delete</button>
+                    </td>
+                </tr>
+                <!-- Additional rows for books can be added here -->
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function openModal(modalId) {
+            // Open a modal with form to add or edit books
+            alert("Open modal for adding a new book!");
+        }
+        
+        function editBook(bookId) {
+            alert("Edit book with ID: " + bookId);
+        }
+
+        function deleteBook(bookId) {
+            alert("Delete book with ID: " + bookId);
+        }
+    </script>
+</body>
+</html>
