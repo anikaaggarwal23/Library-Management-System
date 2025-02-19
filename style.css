@@ -1,0 +1,34 @@
+.heading {
+  text-align: left;
+  font-size:40px;
+  color:DarkMagenta ;
+  font-family:Serif;
+}
+#para1 {
+  text-align: left;
+  color: RebeccaPurple;
+  font-size:140%;
+  font-family:Monaco;
+}
+#para2 {
+  text-align: left;
+  color: MediumVioletRed;
+  font-size:140%;
+  font-family:Monaco;
+}
+ul li {
+  color: MediumVioletRed;
+  margin: 5px;
+  font-size:140%;
+}
+a:link, a:visited {
+  background-color: Plum;
+  color: Black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: Orchid;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home Page</a></li>
+                <li><a href="manageBooks.html">Manage Books</a></li>
+                <li><a href="manageStudents.html">Manage Students</a></li>
+                <li><a href="issueBook.html">Issue Book</a></li>
+                <li><a href="returnBook.html">Return Book</a></li>
+                <li><a href="viewRecords.html">View Records</a></li>
+                <li><a href="viewIssuedBooks.html">View Issued Books</a></li>
+                <li><a href="defaulterList.html">Defaulter List</a></li>
+            </ul>
+        </nav>
+        <a href="logout.html" class="logout-button">Logout</a>
+    </div>
+
+    <div class="content">
+        <h1>Library Management System Dashboard</h1>
+        
+        <div class="overview-boxes">
+            <div class="overview-box">
+                <h3>No. of Books</h3>
+                <p>4</p>
+            </div>
+            <div class="overview-box">
+                <h3>No. of Students</h3>
+                <p>6</p>
+            </div>
+            <div class="overview-box">
+                <h3>Issued Books</h3>
+                <p>2</p>
+            </div>
+            <div class="overview-box">
+                <h3>Defaulter List</h3>
+                <p>1</p>
+            </div>
+        </div>
+
+        <div class="tables-and-chart">
+            <div class="table-container">
+                <h2>Student Details</h2>
+                <table>
+                    <tr>
+                        <th>Student Id</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Branch</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Sunil</td>
+                        <td>BSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mangesh</td>
+                        <td>MSC</td>
+                        <td>CS</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Deepak</td>
+                        <td>BSC</td>
+                        <td>IT</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Rahul</td>
+                        <td>BSC</td>
+                        <td>Plain</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Praful</td>
+                        <td>B.E</td>
+                        <td>IT</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="table-container">
+                <h2>Books Details</h2>
+                <table>
+                    <tr>
+                        <th>Book Id</th>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Introducing Java 8</td>
+                        <td>Raoul-Gabriel Urma</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Java: The Legend</td>
+                        <td>Benjamin Evans</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Spring MVC: A Tutorial</td>
+                        <td>Paul Deck</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Core Java Volume 1</td>
+                        <td>Cay S. Horstmann</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="chart-container">
+                <h2>Issued Books Details</h2>
+                <canvas id="booksChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="top-nav">
+        <span class="nav-title">Library Management System</span>
+        <div class="nav-user-info">
+            <span>Welcome, Admin</span>
+            <i class="info-icon">ℹ️</i>
+        </div>
+    </div>
+
+    <script>
+        // Pie chart data and config
+        const ctx = document.getElementById('booksChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Core Java Volume 1', 'Spring MVC', 'Introducing Java 8', 'Java: The Legend'],
+                datasets: [{
+                    data: [5, 3, 4, 2],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
